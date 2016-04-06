@@ -26,7 +26,17 @@ angular.module('starter', ['ionic', 'ngCordova'])
     $stateProvider.state('app', {
         url: '/app',
         templateUrl: 'templates/app.html',
-        controller: 'AppCtrl'
+        controller: 'AppCtrl',
+        views: {
+            'broken': {
+                templateUrl: 'templates/app.html',
+                controller: 'BrokenCtrl'
+            },
+            'working': {
+                templateUrl: 'templates/app.html',
+                controller: 'WorkingCtrl'
+            }
+        }
     })
 
     $urlRouterProvider.otherwise("/app")
