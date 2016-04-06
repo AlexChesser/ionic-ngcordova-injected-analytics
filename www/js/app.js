@@ -21,3 +21,13 @@ angular.module('starter', ['ionic', 'ngCordova'])
     }
   });
 })
+.config(function($logProvider, $stateProvider, $urlRouterProvider){
+
+    $stateProvider.state('app', {
+        url: '/app',
+        templateUrl: 'templates/app.html',
+        controller: 'AppCtrl'
+    })
+
+    $urlRouterProvider.otherwise("/app")
+})
